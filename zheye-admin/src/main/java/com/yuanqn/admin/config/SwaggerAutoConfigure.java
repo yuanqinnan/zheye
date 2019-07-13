@@ -1,4 +1,4 @@
-package com.yuanqn.zheye.admin.config;
+package com.yuanqn.admin.config;
 
 import com.google.common.base.Predicates;
 import org.springframework.beans.factory.annotation.Value;

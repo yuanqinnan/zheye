@@ -1,4 +1,4 @@
-package com.yuanqn.zheye.base.utils;
+package com.yuanqn.base.utils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

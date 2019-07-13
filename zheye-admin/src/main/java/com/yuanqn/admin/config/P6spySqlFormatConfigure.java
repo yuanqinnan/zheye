@@ -1,7 +1,7 @@
-package com.yuanqn.zheye.admin.config;
+package com.yuanqn.admin.config;
 
 import com.p6spy.engine.spy.appender.MessageFormattingStrategy;
-import com.yuanqn.zheye.base.utils.DateUtil;
+import com.yuanqn.base.utils.DateUtil;
 import org.apache.commons.lang3.StringUtils;
 
 import java.time.LocalDateTime;

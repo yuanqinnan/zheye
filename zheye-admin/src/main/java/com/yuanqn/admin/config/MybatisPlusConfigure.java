@@ -1,4 +1,4 @@
-package com.yuanqn.zheye.admin.config;
+package com.yuanqn.admin.config;
 
 import com.baomidou.mybatisplus.core.parser.ISqlParser;
 import com.baomidou.mybatisplus.extension.parsers.BlockAttackSqlParser;

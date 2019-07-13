@@ -1,4 +1,4 @@
-package com.yuanqn.zheye.base.annotation;
+package com.yuanqn.base.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,10 +7,11 @@ import java.lang.annotation.Target;
 
 /**
  * @author:yuanqinnan
- * @date: 2019/7/13 10:19
- * @des 不要求登录的注解
+ * @date: 2019/7/13 10:21
+ * @des 要求后台登录的注解
  */
+
 @Target({ElementType.TYPE, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
-public @interface NotRequireLogin {
+public @interface RequireAdminLogin {
 }

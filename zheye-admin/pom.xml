@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.yuanqn.zheye</groupId>
-    <artifactId>admin</artifactId>
+    <groupId>com.yuanqn</groupId>
+    <artifactId>zheye.admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>zheye-admin</name>
+    <name>admin</name>
     <description>后台管理系统</description>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -25,7 +25,7 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>com.yuanqn.zheye</groupId>
+            <groupId>com.yuanqn</groupId>
             <artifactId>base-utils</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>

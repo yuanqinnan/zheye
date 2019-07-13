@@ -1,7 +1,7 @@
-package com.yuanqn.zheye.base.exception;
+package com.yuanqn.base.exception;
 
-import com.yuanqn.zheye.base.bean.ErrorCode;
-import com.yuanqn.zheye.base.bean.GlobalError;
+import com.yuanqn.base.bean.ErrorCode;
+import com.yuanqn.base.bean.GlobalError;
 import lombok.Getter;
 import lombok.Setter;
 

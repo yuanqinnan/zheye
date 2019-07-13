@@ -1,4 +1,4 @@
-package com.yuanqn.zheye.base.bean;
+package com.yuanqn.base.bean;
 
 import lombok.Getter;
 

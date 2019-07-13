@@ -1,8 +1,8 @@
-package com.yuanqn.zheye.base.utils;
+package com.yuanqn.base.utils;
 
-import com.yuanqn.zheye.base.annotation.NotRequireLogin;
-import com.yuanqn.zheye.base.annotation.RequireAdminLogin;
-import com.yuanqn.zheye.base.annotation.RequireLogin;
+import com.yuanqn.base.annotation.NotRequireLogin;
+import com.yuanqn.base.annotation.RequireAdminLogin;
+import com.yuanqn.base.annotation.RequireLogin;
 import org.springframework.web.method.HandlerMethod;
 import org.springframework.web.servlet.resource.ResourceHttpRequestHandler;
 

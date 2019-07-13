@@ -1,4 +1,4 @@
-package com.yuanqn.zheye.base.bean;
+package com.yuanqn.base.bean;
 
 import lombok.Getter;
 import lombok.Setter;
@@ -10,6 +10,7 @@ import java.io.Serializable;
  * @date: 2019/7/13 10:33
  * @des:
  */
+
 @Getter
 @Setter
 public class WebJsonBean<T> implements Serializable {

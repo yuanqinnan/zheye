@@ -1,4 +1,4 @@
-package com.yuanqn.zheye.base.exception;
+package com.yuanqn.base.exception;
 
 import java.io.Serializable;
 

@@ -1,4 +1,4 @@
-package com.yuanqn.zheye.admin.config;
+package com.yuanqn.admin.config;
 
 import com.pugwoo.wooutils.cache.HiSpeedCacheAspect;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
