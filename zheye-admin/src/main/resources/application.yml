@@ -9,7 +9,7 @@ server:
 springfox:
   documentation:
     swagger:
-      title: 后台注册api接口
+      title: 后台管理api接口
       author: 袁秦楠
       email:
       description:
