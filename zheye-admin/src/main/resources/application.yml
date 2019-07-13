@@ -1,0 +1,15 @@
+spring:
+  profiles:
+    active: local
+  application:
+    name: admin
+server:
+  servlet:
+    context-path: /admin
+springfox:
+  documentation:
+    swagger:
+      title: 后台注册api接口
+      author: 袁秦楠
+      email:
+      description:
