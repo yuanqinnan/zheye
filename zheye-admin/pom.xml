@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yuanqn</groupId>
-    <artifactId>zheye.admin</artifactId>
+    <artifactId>zheye-admin</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
