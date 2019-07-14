@@ -89,11 +89,11 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- 验证码 -->
+        <!-- 验证码生成插件 -->
         <dependency>
-            <groupId>com.bladejava</groupId>
-            <artifactId>blade-patchca</artifactId>
-            <version>1.1.2</version>
+            <groupId>com.github.whvcse</groupId>
+            <artifactId>EasyCaptcha</artifactId>
+            <version>1.5.0</version>
         </dependency>
 
         <!--swagger-->

@@ -11,14 +11,14 @@ spring:
         connection-test-query: select 1
         pool-name: FebsHikariCP
       # 配置默认数据源
-      primary: base
+      primary: admin
       datasource:
         # 数据源-1，名称为 base
-        base:
+        admin:
           username: root
           password: 123456
           driver-class-name: com.mysql.cj.jdbc.Driver
-          url: jdbc:mysql://127.0.0.1:3306/febs_base?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
+          url: jdbc:mysql://127.0.0.1:3306/zheye_admin?useUnicode=true&characterEncoding=UTF-8&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2b8
   redis:
     # Redis数据库索引（默认为 0）
     database: 0
@@ -27,4 +27,4 @@ spring:
     # Redis服务器连接端口
     port: 6379
     # Redis 密码
-    password: 123456
+    password:

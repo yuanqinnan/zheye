@@ -1,4 +1,4 @@
-package com.yuanqn.admin.config;
+package com.yuanqn.admin.common.config;
 
 import com.pugwoo.wooutils.redis.RedisHelper;
 import com.pugwoo.wooutils.redis.RedisSyncAspect;

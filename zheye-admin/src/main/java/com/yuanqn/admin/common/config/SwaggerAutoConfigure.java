@@ -1,4 +1,4 @@
-package com.yuanqn.admin.config;
+package com.yuanqn.admin.common.config;
 
 import com.google.common.base.Predicates;
 import org.springframework.beans.factory.annotation.Value;
