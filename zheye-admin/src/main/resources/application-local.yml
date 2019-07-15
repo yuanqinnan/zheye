@@ -13,7 +13,7 @@ spring:
       # 配置默认数据源
       primary: admin
       datasource:
-        # 数据源-1，名称为 base
+        # 数据源-1，名称为 admin
         admin:
           username: root
           password: 123456

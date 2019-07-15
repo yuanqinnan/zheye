@@ -8,7 +8,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
-import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
@@ -21,7 +20,8 @@ import java.util.Date;
 @TableName("t_admin_user")
 public class User {
 
-    public static final String DEFAULT_STATUS = "NORMAL";
+    //默认状态
+    public static final String DEFAULT_STATUS = "EFFECTIVITY";
 
     // 默认密码
     public static final String DEFAULT_PASSWORD = "1234qwer";
@@ -66,7 +66,7 @@ public class User {
     private String phone;
 
     /**
-     * 状态 0锁定 1有效
+     * 状态 LOCK，EFFECTIVITY
      */
     @TableField("status")
     private String status;
@@ -91,7 +91,7 @@ public class User {
     private Date lastLoginTime;
 
     /**
-     * 性别 0男 1女 2 保密
+     * 性别 MAN,WOMAN,SECRECY
      */
     @TableField("sex")
     private String sex;
