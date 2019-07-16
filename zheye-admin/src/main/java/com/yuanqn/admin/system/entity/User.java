@@ -1,9 +1,6 @@
 package com.yuanqn.admin.system.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
@@ -17,7 +14,7 @@ import java.util.Date;
  */
 
 @Data
-@TableName("t_admin_user")
+@TableName("t_sys_user")
 public class User {
 
     //默认状态
@@ -29,8 +26,8 @@ public class User {
     /**
      * 用户 ID
      */
-    @TableId(value = "user_Id", type = IdType.AUTO)
-    private Long userId;
+    @TableId(value = "Id", type = IdType.AUTO)
+    private Long Id;
 
     /**
      * 用户名
@@ -93,7 +90,7 @@ public class User {
     /**
      * 性别 MAN,WOMAN,SECRECY
      */
-    @TableField("sex")
+    @TableField(value = "sex")
     private String sex;
 
     /**
