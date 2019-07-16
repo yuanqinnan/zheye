@@ -6,7 +6,8 @@ package com.yuanqn.admin.common.enums;
  */
 public enum UserStatusEnum {
 
-    WAIT_SUBMIT("WAIT_SUBMIT", "待提交"),
+    LOCK("LOCK", "锁定"),
+    EFFECTIVITY("EFFECTIVITY", "有效"),
     ;
 
     private String code;
@@ -37,9 +38,9 @@ public enum UserStatusEnum {
     }
 
     public static String getNameByCode(String code) {
-        UserStatusEnum brokerStatusEnum = getByCode(code);
-        if (brokerStatusEnum != null) {
-            return brokerStatusEnum.getName();
+        UserStatusEnum e = getByCode(code);
+        if (e != null) {
+            return e.getName();
         }
         return "";
     }

@@ -1,6 +1,8 @@
 package com.yuanqn.admin.system;
 
 import com.pugwoo.wooutils.redis.RedisHelper;
+import com.yuanqn.admin.common.enums.UserSexEnum;
+import com.yuanqn.admin.common.enums.UserStatusEnum;
 import com.yuanqn.admin.system.entity.User;
 import com.yuanqn.admin.system.service.IUserService;
 import org.junit.Test;
@@ -24,21 +26,21 @@ public class UserTest {
     @Autowired
     RedisHelper redisHelper;
 
-
     @Test
-    public void test(){
-        User user=new User();
+    public void test() {
+        User user = new User();
         user.setDeptId(1L);
-        user.setMail("1234@163.com");
-        user.setName("张三");
+        user.setMail("yuanqinnanwy@163.com");
+        user.setName("袁帅");
         user.setUsername("admin");
         user.setPhone("18948329231");
-        user.setSex("MAN");
+        user.setSex(UserSexEnum.MAN.getCode());
+        user.setStatus(UserStatusEnum.EFFECTIVITY.getCode());
         userService.createUser(user);
     }
 
     @Test
-    public void redisTest(){
-        redisHelper.setString("admin:123",2000,"456");
+    public void redisTest() {
+        redisHelper.setString("admin:123", 2000, "456");
     }
 }
