@@ -11,8 +11,15 @@ import org.springframework.transaction.annotation.Transactional;
  * @date 2019/7/13 23:32
  */
 
-
 public interface IUserService extends IService<User> {
+
+    /**
+     * 通过用户名查找用户
+     *
+     * @param username username
+     * @return user
+     */
+    User findByName(String username);
 
     /**
      * 新增用户

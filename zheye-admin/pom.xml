@@ -29,11 +29,6 @@
             <artifactId>base-utils</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>com.pugwoo</groupId>
-            <artifactId>woo-utils</artifactId>
-            <version>0.6.5</version>
-        </dependency>
         <!-- Spring系列 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -53,7 +48,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+        </dependency>
 
         <!-- MyBatis增强插件 -->
         <dependency>
@@ -89,8 +87,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.6</version>
-            <scope>provided</scope>
+            <optional>true</optional>
         </dependency>
 
         <!-- 验证码生成插件 -->
@@ -128,6 +125,12 @@
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
             <version>2.6</version>
+        </dependency>
+        <!-- jwt -->
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.4.1</version>
         </dependency>
     </dependencies>
     <build>

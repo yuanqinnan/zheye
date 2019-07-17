@@ -63,6 +63,12 @@ public class GlobalException extends RuntimeException implements Serializable {
         this.errorCode.setMessage(messages);
     }
 
+    public GlobalException(String messages) {
+        super(messages);
+        this.errorCode = new DefaultErrorCode();
+        this.errorCode.setCode(GlobalError.SYSTEM_ERROR.getCode());
+        this.errorCode.setMessage(messages);
+    }
 
     public ErrorCode getGlobalError() {
         return errorCode;

@@ -10,7 +10,6 @@ import java.io.Serializable;
  * @date: 2019/7/13 10:33
  * @des:
  */
-
 @Getter
 @Setter
 public class WebJsonBean<T> implements Serializable {

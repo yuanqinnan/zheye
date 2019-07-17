@@ -26,6 +26,11 @@
             <version>1.18.8</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>com.pugwoo</groupId>
+            <artifactId>woo-utils</artifactId>
+            <version>0.6.5</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>

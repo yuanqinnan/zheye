@@ -21,6 +21,11 @@ import java.util.Date;
 public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IUserService {
 
     @Override
+    public User findByName(String username) {
+        return null;
+    }
+
+    @Override
     @Transactional
     public void createUser(User user) {
         user.setCreateTime(new Date());
