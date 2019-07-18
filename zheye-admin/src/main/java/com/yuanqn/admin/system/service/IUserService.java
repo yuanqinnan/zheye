@@ -28,4 +28,21 @@ public interface IUserService extends IService<User> {
      */
     void createUser(User user);
 
+    /**
+     * 更新登录时间
+     *
+     * @param 
+       @return 
+    */
+    void updateLoginTime(String username) throws Exception;
+
+
+    /**
+     * 注册用户
+     *
+     * @param 
+       @return 
+    */
+    void register(String username, String password) throws Exception;
+
 }

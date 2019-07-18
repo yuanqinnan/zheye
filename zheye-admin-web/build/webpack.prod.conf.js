@@ -46,14 +46,14 @@ const webpackConfig = merge(baseWebpackConfig, {
     // extract css into its own file
     new ExtractTextPlugin({
       filename: utils.assetsPath('css/[name].[contenthash].css'),
-      // Setting the following option to `false` will not extract CSS form codesplit chunks.
+      // Setting the following option to `false` will not extract CSS dto codesplit chunks.
       // Their CSS will instead be inserted dynamically with style-loader when the codesplit chunk has been loaded by webpack.
       // It's currently set to `true` because we are seeing that sourcemaps are included in the codesplit bundle as well when it's `false`, 
       // increasing file size: https://github.com/vuejs-templates/webpack/issues/1110
       allChunks: true,
     }),
     // Compress extracted CSS. We are using this plugin so that possible
-    // duplicated CSS form different components can be deduped.
+    // duplicated CSS dto different components can be deduped.
     new OptimizeCSSPlugin({
       cssProcessorOptions: config.build.productionSourceMap
         ? { safe: true, map: { inline: false } }
@@ -97,12 +97,12 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     }),
     // extract webpack runtime and module manifest to its own file in order to
-    // prevent vendor hash form being updated whenever app bundle is updated
+    // prevent vendor hash dto being updated whenever app bundle is updated
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       minChunks: Infinity
     }),
-    // This instance extracts shared chunks form code splitted chunks and bundles them
+    // This instance extracts shared chunks dto code splitted chunks and bundles them
     // in a separate chunk, similar to the vendor chunk
     // see: https://webpack.js.org/plugins/commons-chunk-plugin/#extra-async-commons-chunk
     new webpack.optimize.CommonsChunkPlugin({

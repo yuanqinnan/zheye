@@ -7,10 +7,8 @@ import com.yuanqn.admin.common.utils.TreeUtil;
 import com.yuanqn.admin.system.entity.Menu;
 import com.yuanqn.admin.system.entity.Role;
 import com.yuanqn.admin.system.entity.User;
-import com.yuanqn.admin.system.service.ICacheService;
-import com.yuanqn.admin.system.service.IMenuService;
-import com.yuanqn.admin.system.service.IRoleService;
-import com.yuanqn.admin.system.service.IUserService;
+import com.yuanqn.admin.system.entity.UserConfig;
+import com.yuanqn.admin.system.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -34,6 +32,9 @@ public class UserManager {
     private IMenuService menuService;
     @Autowired
     private IUserService userService;
+    @Autowired
+    private IUserConfigService userConfigService;
+
     /**
      * 通过用户名获取用户基本信息
      *
@@ -142,6 +143,19 @@ public class UserManager {
             }
             cacheService.deleteUserConfigs(userId);
         }
+    }
+
+
+    /**
+     * 通过用户 ID获取前端系统个性化配置
+     *
+     * @param userId 用户 ID
+     * @return 前端系统个性化配置
+     */
+    public UserConfig getUserConfig(String userId) throws Exception {
+        return CommonUtil.selectCacheByTemplate(
+                () -> this.cacheService.getUserConfig(userId),
+                () -> this.userConfigService.findByUserId(userId));
     }
 
 }

@@ -13,5 +13,5 @@ public class ShiroProperties {
     /**
      * token默认有效时间 1天
      */
-    private Long jwtTimeOut = 3600L * 24;
+    private Integer jwtTimeOut = 3600 * 24;
 }

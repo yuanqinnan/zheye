@@ -3,7 +3,7 @@ package com.yuanqn.admin.system.service;
 import com.yuanqn.admin.system.entity.Menu;
 import com.yuanqn.admin.system.entity.Role;
 import com.yuanqn.admin.system.entity.User;
-import org.apache.catalina.startup.UserConfig;
+import com.yuanqn.admin.system.entity.UserConfig;
 
 import java.util.List;
 
@@ -16,7 +16,7 @@ public interface ICacheService {
     /**
      * 测试 Redis是否连接成功
      */
-    void testConnect() throws Exception;
+    boolean testConnect() throws Exception;
 
     /**
      * 从缓存中获取用户

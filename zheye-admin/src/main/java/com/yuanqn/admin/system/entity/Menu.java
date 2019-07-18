@@ -27,9 +27,10 @@ public class Menu implements Serializable {
     @TableId(value = "name")
     private String menuName;
 
-    @TableId(value = "url")
+    @TableId(value = "path")
     private String path;
 
+    @TableId(value = "component")
     private String component;
 
     @TableId(value = "perms")

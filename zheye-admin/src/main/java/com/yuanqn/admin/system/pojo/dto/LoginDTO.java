@@ -1,4 +1,4 @@
-package com.yuanqn.admin.system.model.form;
+package com.yuanqn.admin.system.pojo.dto;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

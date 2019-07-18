@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.Data;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Date;
 
@@ -51,10 +52,10 @@ public class User {
     /**
      * 邮箱
      */
-    @TableField("e_mall")
+    @TableField("email")
     @Size(max = 50)
     @Email(message = "{email}")
-    private String mail;
+    private String email;
 
     /**
      * 联系电话
@@ -98,4 +99,12 @@ public class User {
      */
     @TableField("name")
     private String name;
+
+    private transient String roleId;
+
+    private transient String roleName;
+
+    private transient String deptName;
+
+    private transient String id;
 }

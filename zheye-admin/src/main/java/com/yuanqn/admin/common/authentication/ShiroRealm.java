@@ -1,5 +1,6 @@
 package com.yuanqn.admin.common.authentication;
 
+import com.baomidou.mybatisplus.core.toolkit.StringPool;
 import com.pugwoo.wooutils.redis.RedisHelper;
 import com.yuanqn.admin.common.config.Constant;
 import com.yuanqn.admin.common.utils.CommonUtil;
@@ -38,7 +39,8 @@ public class ShiroRealm extends AuthorizingRealm {
         return token instanceof JWTToken;
     }
 
-    /**`
+    /**
+     * `
      * 授权模块，获取用户角色和权限
      *
      * @param token token
@@ -79,7 +81,7 @@ public class ShiroRealm extends AuthorizingRealm {
         String encryptToken = CommonUtil.encryptToken(token);
         String encryptTokenInRedis = null;
         try {
-            encryptTokenInRedis = redisHelper.getString(Constant.TOKEN_CACHE_PREFIX + encryptToken + "." + ip);
+            encryptTokenInRedis = redisHelper.getObject(Constant.TOKEN_CACHE_PREFIX + encryptToken + StringPool.COLON + ip, String.class);
         } catch (Exception ignore) {
         }
         // 如果找不到，说明已经失效
@@ -98,6 +100,6 @@ public class ShiroRealm extends AuthorizingRealm {
             throw new AuthenticationException("用户名或密码错误");
         if (!JWTUtil.verify(token, username, user.getPassword()))
             throw new AuthenticationException("token校验不通过");
-        return new SimpleAuthenticationInfo(token, token, "febs_shiro_realm");
+        return new SimpleAuthenticationInfo(token, token, "zheye_shiro_realm");
     }
 }

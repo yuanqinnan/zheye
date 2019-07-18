@@ -9,7 +9,19 @@ server:
 springfox:
   documentation:
     swagger:
-      title: 后台管理api接口
+      title: 者也后台管理api接口
       author: 袁秦楠
       email:
       description:
+#mybatis plus 设置
+mybatis-plus:
+  type-aliases-package: com.yuanqn.admin.system.entity
+  mapper-locations: classpath:mapper/*/*.xml
+  configuration:
+    jdbc-type-for-null: null
+  global-config:
+    # 关闭 mybatis-plus的 banner
+    banner: false
+app:
+  redis:
+    timeout: 1 # redis缓存默认过期时间，单位天

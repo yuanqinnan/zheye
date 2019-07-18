@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuanqn.admin.system.mapper.MenuMapper">
+    <resultMap id="menu" type="com.yuanqn.admin.system.entity.Menu">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="DECIMAL" property="menuId"/>
+        <result column="parent_id" jdbcType="DECIMAL" property="parentId"/>
+        <result column="name" jdbcType="VARCHAR" property="menuName"/>
+        <result column="path" jdbcType="VARCHAR" property="path"/>
+        <result column="component" jdbcType="VARCHAR" property="component"/>
+        <result column="perms" jdbcType="VARCHAR" property="perms"/>
+        <result column="icon" jdbcType="VARCHAR" property="icon"/>
+        <result column="type" jdbcType="CHAR" property="type"/>
+        <result column="order_num" jdbcType="DOUBLE" property="orderNum"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime"/>
+    </resultMap>
+
+    <select id="findUserPermissions" resultMap="menu">
+        select distinct m.perms
+        from t_sys_role r
+                 left join t_sys_user_role ur on (r.id = ur.role_id)
+                 left join t_sys_user u on (u.id = ur.user_id)
+                 left join t_sys_role_menu rm on (rm.roid_id = r.id)
+                 left join t_sys_menu m on (m.id = rm.menu_id)
+        where u.user_name = #{userName}
+          and m.perms is not null
+          and m.perms &lt;&gt; ''
+    </select>
+
+</mapper>

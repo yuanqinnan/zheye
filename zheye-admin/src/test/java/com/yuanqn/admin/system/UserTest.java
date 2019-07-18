@@ -27,16 +27,8 @@ public class UserTest {
     RedisHelper redisHelper;
 
     @Test
-    public void test() {
-        User user = new User();
-        user.setDeptId(1L);
-        user.setMail("yuanqinnanwy@163.com");
-        user.setName("袁帅");
-        user.setUsername("admin");
-        user.setPhone("18948329231");
-        user.setSex(UserSexEnum.MAN.getCode());
-        user.setStatus(UserStatusEnum.EFFECTIVITY.getCode());
-        userService.createUser(user);
+    public void test() throws Exception {
+        userService.register("admin","123456");
     }
 
     @Test

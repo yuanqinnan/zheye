@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yuanqn.admin.system.mapper.RoleMapper">
+    <resultMap id="roleMap" type="com.yuanqn.admin.system.entity.Role">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <result column="id" jdbcType="DECIMAL" property="roleId"/>
+        <result column="name" jdbcType="VARCHAR" property="roleName"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="modify_time" jdbcType="TIMESTAMP" property="modifyTime"/>
+    </resultMap>
+
+    <select id="findUserRole" resultMap="roleMap">
+        select r.*
+        from t_sys_role r
+                 left join t_sys_user_role ur on (r.id = ur.role_id)
+                 left join t_sys_user u on (u.id = ur.user_id)
+        where u.user_name  = #{userName}
+    </select>
+
+</mapper>

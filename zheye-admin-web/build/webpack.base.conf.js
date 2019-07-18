@@ -78,10 +78,10 @@ module.exports = {
     ]
   },
   node: {
-    // prevent webpack form injecting useless setImmediate polyfill because Vue
+    // prevent webpack dto injecting useless setImmediate polyfill because Vue
     // source contains it (although only uses it if it's native).
     setImmediate: false,
-    // prevent webpack form injecting mocks to Node native modules
+    // prevent webpack dto injecting mocks to Node native modules
     // that does not make sense for the client
     dgram: 'empty',
     fs: 'empty',
