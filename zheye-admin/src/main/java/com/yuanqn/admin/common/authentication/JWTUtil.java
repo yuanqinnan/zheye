@@ -5,7 +5,7 @@ import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.interfaces.DecodedJWT;
-import com.yuanqn.admin.common.properties.ZheyeProperties;
+import com.yuanqn.admin.common.properties.AppProperties;
 import com.yuanqn.admin.common.utils.SpringContextUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
@@ -19,7 +19,7 @@ import java.util.Date;
 @Slf4j
 public class JWTUtil {
 
-    private static final long EXPIRE_TIME = SpringContextUtil.getBean(ZheyeProperties.class).getShiro().getJwtTimeOut();
+    private static final long EXPIRE_TIME = SpringContextUtil.getBean(AppProperties.class).getShiro().getJwtTimeOut();
 
     /**
      * 校验 token是否正确

@@ -9,7 +9,7 @@ import com.yuanqn.admin.common.config.Constant;
 import com.yuanqn.admin.common.controller.BaseController;
 import com.yuanqn.admin.common.enums.UserStatusEnum;
 import com.yuanqn.admin.common.model.ActiveUser;
-import com.yuanqn.admin.common.properties.ZheyeProperties;
+import com.yuanqn.admin.common.properties.AppProperties;
 import com.yuanqn.admin.common.utils.*;
 import com.yuanqn.admin.system.entity.User;
 import com.yuanqn.admin.system.manager.UserManager;
@@ -48,7 +48,7 @@ public class LoginController extends BaseController {
     private IUserService userService;
 
     @Autowired
-    private ZheyeProperties properties;
+    private AppProperties properties;
 
     @Autowired
     private RedisHelper redisHelper;

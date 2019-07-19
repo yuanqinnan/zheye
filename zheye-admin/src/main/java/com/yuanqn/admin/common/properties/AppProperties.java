@@ -11,8 +11,8 @@ import org.springframework.context.annotation.Configuration;
 
 @Data
 @Configuration
-@ConfigurationProperties(prefix = "zheye")
-public class ZheyeProperties {
+@ConfigurationProperties(prefix = "app")
+public class AppProperties {
 
     private ShiroProperties shiro = new ShiroProperties();
 

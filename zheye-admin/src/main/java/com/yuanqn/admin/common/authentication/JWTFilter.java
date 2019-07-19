@@ -1,7 +1,7 @@
 package com.yuanqn.admin.common.authentication;
 
 import com.baomidou.mybatisplus.core.toolkit.StringPool;
-import com.yuanqn.admin.common.properties.ZheyeProperties;
+import com.yuanqn.admin.common.properties.AppProperties;
 import com.yuanqn.admin.common.utils.SpringContextUtil;
 import lombok.extern.log4j.Log4j2;
 import org.apache.commons.lang3.StringUtils;
@@ -33,7 +33,7 @@ public class JWTFilter extends BasicHttpAuthenticationFilter {
     @Override
     protected boolean isAccessAllowed(ServletRequest request, ServletResponse response, Object mappedValue) throws UnauthorizedException {
         HttpServletRequest httpServletRequest = (HttpServletRequest) request;
-        ZheyeProperties zheyeProperties = SpringContextUtil.getBean(ZheyeProperties.class);
+        AppProperties zheyeProperties = SpringContextUtil.getBean(AppProperties.class);
         String[] anonUrl = StringUtils.splitByWholeSeparatorPreserveAllTokens(zheyeProperties.getShiro().getAnonUrl(), StringPool.COMMA);
 
         boolean match = false;
