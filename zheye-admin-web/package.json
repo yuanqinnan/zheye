@@ -1,7 +1,7 @@
 {
   "name": "zhey-admin-web",
   "version": "1.0.0",
-  "description": "A Vue.js project",
+  "description": "zhey-admin-web",
   "author": "yuanqinnan <1546022688@qq.com>",
   "private": true,
   "scripts": {
@@ -10,8 +10,19 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "axios": "^0.18.0",
+    "dayjs": "^1.7.5",
+    "iview": "^3.0.0",
+    "js-cookie": "^2.2.0",
+    "js-md5": "^0.7.3",
+    "string-format": "^2.0.0",
+    "vue": "^2.5.10",
+    "vue-i18n": "^7.8.0",
+    "vue-router": "^3.0.1",
+    "vue-table-with-tree-grid": "^0.2.4",
+    "vuedraggable": "^2.16.0",
+    "vuex": "^3.0.1",
+    "xlsx": "^0.13.3"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
